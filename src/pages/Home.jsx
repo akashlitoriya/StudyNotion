@@ -11,11 +11,11 @@ import InstructorAndReview from '../components/core/HomeComp/InstructorAndReview
 import ExploreMore from '../components/core/HomeComp/ExploreMore'
 const Home = () => {
   return (
-    <div className='text-white'>
+    <div className='text-white mt-16'>
       {/* Section - 1 */}
       <div className='relative mx-auto w-11/12 flex flex-col justify-center items-center text-white gap-10'>
         <Link to="/signup">
-            <div className='group mt-28 bg-richblack-800 rounded-full px-5 py-2 hover:scale-95 transition-all duration-200 font-bold w-fit'>
+            <div className='group bg-richblack-800 rounded-full px-5 py-2 hover:scale-95 transition-all duration-200 font-bold w-fit'>
                 <div className='flex flex-row items-center gap-2 group-hover:bg-richblack-900 text-richblack-200'>
                     <p>Become a Instructor</p>
                     <FaArrowRight/>
