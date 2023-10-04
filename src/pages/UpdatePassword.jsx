@@ -70,7 +70,7 @@ const UpdatePassword = () => {
                                 onChange={handleFormChange}
                                 className='p-3 w-full bg-richblack-700 rounded-lg text-richblack-50'
                             />
-                            <span className='absolute right-3 top-[35px] z-[10] cursor-pointer text-xl text-richblack-300' onClick={() => setShowConfirmPassword((prev)=>!prev)}>{
+                            <span className='absolute right-3 top-[25px] z-[10] cursor-pointer text-xl text-richblack-300' onClick={() => setShowConfirmPassword((prev)=>!prev)}>{
                                 showConfirmPassword? <AiFillEyeInvisible /> : <AiFillEye />
                                 }
                             </span>
