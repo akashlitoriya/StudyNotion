@@ -17,8 +17,8 @@ function SignUp() {
   const [accountType, setAccountType] = useState(ACCOUNT_TYPE.STUDENT)
 
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+    first_name: "",
+    last_name: "",
     email: "",
     password: "",
     confirmPassword: "",
@@ -27,7 +27,7 @@ function SignUp() {
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
 
-  const { firstName, lastName, email, password, confirmPassword } = formData
+  const { first_name, last_name, email, password, confirmPassword } = formData
 
   // Handle input fields, when some value changes
   const handleOnChange = (e) => {
@@ -58,8 +58,8 @@ function SignUp() {
 
     // Reset
     setFormData({
-      firstName: "",
-      lastName: "",
+      first_name: "",
+      last_name: "",
       email: "",
       password: "",
       confirmPassword: "",
@@ -95,8 +95,8 @@ function SignUp() {
             <input
               required
               type="text"
-              name="firstName"
-              value={firstName}
+              name="first_name"
+              value={first_name}
               onChange={handleOnChange}
               placeholder="Enter first name"
               style={{
@@ -112,8 +112,8 @@ function SignUp() {
             <input
               required
               type="text"
-              name="lastName"
-              value={lastName}
+              name="last_name"
+              value={last_name}
               onChange={handleOnChange}
               placeholder="Enter last name"
               style={{

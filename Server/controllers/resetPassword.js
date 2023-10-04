@@ -21,7 +21,7 @@ exports.resetPasswordToken = async(req, res) =>{
         //updating user with token and tokenExpires
         const updateUser = await User.findOneAndUpdate({email: email},{token: token, resetPasswordExpires: Date.now()+5*60*1000}, {new:true});
         //creating url for resetPassword
-        const url = `https://localhost:3000/update-password/${token}`
+        const url = `http://localhost:3000/update-password/${token}`
         //sending mail with url to reset password
         const mail = await mailSender(
             email,
