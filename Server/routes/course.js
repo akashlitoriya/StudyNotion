@@ -1,8 +1,6 @@
 // Import the required modules
-const express = require("express")
-const router = express.Router()
-
-// Import the Controllers
+const express = require("express");
+const router = express.Router();
 
 // Course Controllers Import
 const {
@@ -14,7 +12,6 @@ const {
   getInstructorCourses,
   deleteCourse,
 } = require("../controllers/Course")
-
 
 // Categories Controllers Import
 const {
@@ -35,7 +32,7 @@ const {
   createSubSection,
   updateSubSection,
   deleteSubSection,
-} = require("../controllers/Subsection")
+} = require("../controllers/SubSection")
 
 // Rating Controllers Import
 const {
