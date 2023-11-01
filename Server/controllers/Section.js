@@ -24,11 +24,14 @@ exports.createSection = async(req, res) => {
                 }
             },
             {new: true}
-        )
+            
+        ).populate('courseContent')
+        .exec();
         //returning response
         return res.status(200).json({
             success: true,
-            message: `Section: ${sectionName} successfully created in Course: ${courseId}`
+            message: `Section: ${sectionName} successfully created in Course: ${courseId}`,
+            course: UpdatedCourse
         })
 
     }catch(err){
@@ -52,7 +55,7 @@ exports.updateSection = async(req, res) => {
             })
         }
         //updating section
-        const updatedSectionDetails = await Section.findByIdAndUpdate(sectionId, {section_Name: sectionName}, {new: true});
+        const updatedSectionDetails = await Section.findByIdAndUpdate(sectionId, {section_Name: sectionName}, {new: true}).populate('courseContent').exec();
         //returning response
         return res.status(200).json({
             success: true,
