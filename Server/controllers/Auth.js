@@ -1,7 +1,7 @@
 //send otp
 
 const User = require('../models/User');
-const OTP = require('../models/OTP');
+const OTP = require('../models/otp');
 const Profile = require('../models/profile')
 const otpGenerator = require('otp-generator');
 const brcypt = require('bcrypt');
@@ -127,7 +127,7 @@ exports.signUp = async(req, res) => {
             password: hashedPassword,
             accountType,
             additionalDetails: profile._id,
-            image: `https://api.dicebear.com/5.x/initials/svg/seeds=${first_name} ${last_name}`,
+            image: `https://api.dicebear.com/5.x/initials/svg/seed=${first_name} ${last_name}`,
 
         })
 
@@ -162,7 +162,7 @@ exports.login = async(req, res) => {
             })
         }
         //checking if user exists or not
-        const user = await User.findOne({email: email});
+        const user = await User.findOne({email: email}).populate("additionalDetails").exec();
         if(!user){
             return res.status(402).json({
                 success: false,
