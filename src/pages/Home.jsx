@@ -23,7 +23,7 @@ const Home = () => {
                 
             </div>
         </Link>
-        <div className='font-semibold text-4xl font-inter'>
+        <div className='font-semibold text-4xl text-center md:text-left font-inter'>
             Empower your future with 
             <HighlightedText text = "Coding Skills"/>
 
@@ -133,7 +133,7 @@ const Home = () => {
             </div>
         </div>
         <div className='w-11/12 max-w-maxContent flex flex-col gap-24 justify-center items-center mx-auto my-[95px]'>
-          <div className='flex flex-row gap-5 mx-auto'>
+          <div className='flex flex-col md:flex-row gap-5 mx-auto'>
             <div className='text-4xl font-bold'>
               Get the skills you need for a 
               <HighlightedText text={"Job that is in demand"} />
