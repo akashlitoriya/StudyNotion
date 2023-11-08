@@ -28,17 +28,17 @@ const ExploreMore = () => {
 
   return (
     <div className='mt-16 flex flex-col items-center gap-6 md:gap-10'>
-        <div className='text-4xl font-semibold font-inter'>
+        <div className='text-3xl md:text-4xl font-semibold font-inter'>
             Unlock the
             <HighlightedText text={"Power of code"} />
         </div>
-        <div className='text-richblack-300 font-inter text-center text-base font-semibold'>
+        <div className='text-richblack-300 font-inter text-center text-sm md:text-base font-semibold'>
         Learn to Build Anything You Can Imagine
         </div>
         <div className='flex flex-row bg-richblack-800 rounded-full border-2 md:border-4 border-richblack-700 text-richblack-300'>
             {data.map((items, index) => {
                 return (
-                    <div key={index} className={`flex items-center px-4 md:px-6 py-2 md:py-3 hover:bg-richblack-900 text-xs md:text-base hover:text-richblack-50 rounded-full cursor-pointer transition-all duration-300 ${currentTab === items? "bg-richblack-900 text-richblack-50" : " "}`} onClick={() => setValue(items)}>
+                    <div key={index} className={`text-center flex items-center px-3 md:px-6 py-1 md:py-3 hover:bg-richblack-900 text-xs md:text-base hover:text-richblack-50 rounded-full cursor-pointer transition-all duration-300 ${currentTab === items? "bg-richblack-900 text-richblack-50" : " "} `} onClick={() => setValue(items)}>
                         {items}
                     </div>
                 )

@@ -18,12 +18,12 @@ const CodeBlock = (
       {/* Section-1  */}
       <div className='flex flex-col gap-7 w-full md:w-1/2 '>
         {heading}
-        <div className='font-semibold text-richblack-300'>
+        <div className='font-semibold text-sm lg:text-base text-richblack-300'>
             {subheading}
         </div>
         <div className='flex w-full md:w-fit gap-10'>
             <CTAButton active={ctaBtn1.active} linkTo={ctaBtn1.linkTo}>
-                <div className='flex gap-3 items-center'>
+                <div className='flex gap-3 text-sm md:text-base items-center'>
                     {ctaBtn1.btnText}
                     <FaArrowRight />
                 </div>
@@ -34,7 +34,7 @@ const CodeBlock = (
         </div>
       </div>
       <div className='flex w-full md:w-1/2 border-2 p-2 border-richblack-400'>
-        <div className='w-[10%] flex flex-col justify-center text-center text-base font-inter text-richblack-500'>
+        <div className='w-[10%] flex flex-col justify-center text-center text-xs md:text-base font-inter text-richblack-500'>
             <p>1</p>
             <p>2</p>
             <p>3</p>
@@ -46,7 +46,7 @@ const CodeBlock = (
             <p>9</p>
             <p>10</p>
         </div>
-        <div className={`w-[90%] flex flex-col font-mono ${code_color}`}>
+        <div className={`w-[90%] flex flex-col text-xs md:text-base font-mono ${code_color}`}>
             <TypeAnimation 
                 sequence={[codeblock, 3000, ""]}
                 repeat={Infinity}

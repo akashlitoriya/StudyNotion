@@ -44,13 +44,13 @@ const Navbar = () => {
         return matchPath({path:route}, location.pathname);
     }
   return (
-    <div className='h-16 z-20 w-full border-b-[1px] border-b-richblack-25 flex items-center fixed top-0 left-0 bg-richblack-800'>
+    <div className='h-14 z-20 w-full border-b-[1px] border-b-richblack-25 flex items-center fixed top-0 left-0 bg-richblack-800'>
         <div className='w-11/12 h-full max-w-maxContent flex flex-row justify-between items-center mx-auto'>
             {/* Hamburger Icon  */}
             <div className='flex lg:hidden flex-col justify-center items-center z-50 relative cursor-pointer' onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                <span className={`w-8 h-[3px] bg-richblack-5 block  transition-all duration-300 ${isMenuOpen? "rotate-45 translate-y-0": "rotate-0 -translate-y-2"}`}></span>
-                <span className={`w-8 h-[3px] bg-richblack-5 block ${isMenuOpen? "opacity-0" : " opacity-100"} transition-all duration-300`}></span>
-                <span className={`w-8 h-[3px] bg-richblack-5 block transition-all duration-300 ${isMenuOpen? "-rotate-45 translate-y-0" : "rotate-0 translate-y-2"}`}></span>
+                <span className={`w-6 h-[3px] bg-richblack-5 block  transition-all duration-300 absolute top-0 left-0 ${isMenuOpen? "rotate-45 translate-y-0": "rotate-0 -translate-y-2"}`}></span>
+                <span className={`w-6 h-[3px] bg-richblack-5 block ${isMenuOpen? "opacity-0" : " opacity-100"} transition-all duration-300`}></span>
+                <span className={`w-6 h-[3px] bg-richblack-5 block transition-all duration-300 absolute top-0 left-0 ${isMenuOpen? "-rotate-45 translate-y-0" : "rotate-0 translate-y-2"}`}></span>
             </div>
             {/* Logo  */}
             <Link to='/'>

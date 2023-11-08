@@ -54,13 +54,13 @@ const TimelineSection = () => {
             
             />
             <div className='absolute flex flex-row justify-between items-center bg-caribbeangreen-600 left-[50%] translate-x-[-50%] translate-y-[-50%] px-5 py-2'>
-                <div className='flex flex-row border-r border-caribbeangreen-300 gap-4 w-[45%] p-5 items-center'>
-                    <h1 className='text-3xl text-white font-bold'>10</h1>
-                    <p className='uppercase text-xs text-caribbeangreen-100'>Years of Experience</p>
+                <div className='flex flex-row border-r border-caribbeangreen-300 gap-2 md:gap-4 w-[45%] p-5 items-center justify-center'>
+                    <h1 className='text-2xl md:text-3xl text-white font-bold'>10</h1>
+                    <p className='uppercase text-[9px] md:text-xs text-caribbeangreen-100'>Years of Experience</p>
                 </div>
-                <div className='flex flex-row gap-4 w-[55%] p-5 items-center'>
-                    <h1 className='text-3xl text-white font-bold'>250</h1>
-                    <p className='uppercase text-xs  text-caribbeangreen-100'>Types of courses</p>
+                <div className='flex flex-row gap-2 md:gap-4 w-[55%] p-5 items-center justify-center'>
+                    <h1 className='text-2xl md:text-3xl text-white font-bold'>250</h1>
+                    <p className='uppercase text-[9px] md:text-xs  text-caribbeangreen-100'>Types of courses</p>
                 </div>
             </div>
         </div>
