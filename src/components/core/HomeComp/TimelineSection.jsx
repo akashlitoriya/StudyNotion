@@ -28,8 +28,8 @@ const TimelineSection = () => {
         }
     ]
   return (
-    <div className='flex flex-row justify-between items-center w-full'>
-        <div className='flex flex-col gap-10'>
+    <div className='flex flex-col md:flex-row justify-between gap-6 items-center w-full'>
+        <div className='flex flex-col w-full md:w-fit gap-5 md:gap-10'>
             {
                 timeline.map((element, index) => {
                     return(

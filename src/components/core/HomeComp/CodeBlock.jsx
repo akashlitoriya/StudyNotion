@@ -14,14 +14,14 @@ const CodeBlock = (
     }
 ) => {
   return (
-    <div className={`flex ${position}  justify-between max-w-[1035px] gap-10`}>
+    <div className={`flex ${position} flex-col  justify-between max-w-[1035px] gap-10`}>
       {/* Section-1  */}
-      <div className='flex flex-col gap-7 w-1/2 '>
+      <div className='flex flex-col gap-7 w-full md:w-1/2 '>
         {heading}
         <div className='font-semibold text-richblack-300'>
             {subheading}
         </div>
-        <div className='flex gap-10'>
+        <div className='flex w-full md:w-fit gap-10'>
             <CTAButton active={ctaBtn1.active} linkTo={ctaBtn1.linkTo}>
                 <div className='flex gap-3 items-center'>
                     {ctaBtn1.btnText}
@@ -33,7 +33,7 @@ const CodeBlock = (
             </CTAButton>
         </div>
       </div>
-      <div className='flex w-1/2 border-2 p-2 border-richblack-400'>
+      <div className='flex w-full md:w-1/2 border-2 p-2 border-richblack-400'>
         <div className='w-[10%] flex flex-col justify-center text-center text-base font-inter text-richblack-500'>
             <p>1</p>
             <p>2</p>

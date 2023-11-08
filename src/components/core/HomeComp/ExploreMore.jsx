@@ -27,7 +27,7 @@ const ExploreMore = () => {
 
 
   return (
-    <div className='mt-16 flex flex-col items-center gap-10'>
+    <div className='mt-16 flex flex-col items-center gap-6 md:gap-10'>
         <div className='text-4xl font-semibold font-inter'>
             Unlock the
             <HighlightedText text={"Power of code"} />
@@ -35,16 +35,16 @@ const ExploreMore = () => {
         <div className='text-richblack-300 font-inter text-center text-base font-semibold'>
         Learn to Build Anything You Can Imagine
         </div>
-        <div className='flex flex-row bg-richblack-800 rounded-full border-4 border-richblack-700 text-richblack-300'>
+        <div className='flex flex-row bg-richblack-800 rounded-full border-2 md:border-4 border-richblack-700 text-richblack-300'>
             {data.map((items, index) => {
                 return (
-                    <div key={index} className={`px-6 py-3 hover:bg-richblack-900 hover:text-richblack-50 rounded-full cursor-pointer transition-all duration-300 ${currentTab === items? "bg-richblack-900 text-richblack-50" : " "}`} onClick={() => setValue(items)}>
+                    <div key={index} className={`flex items-center px-4 md:px-6 py-2 md:py-3 hover:bg-richblack-900 text-xs md:text-base hover:text-richblack-50 rounded-full cursor-pointer transition-all duration-300 ${currentTab === items? "bg-richblack-900 text-richblack-50" : " "}`} onClick={() => setValue(items)}>
                         {items}
                     </div>
                 )
             })}
         </div>
-        <div className='flex flex-row gap-10 max-w-maxContent'>
+        <div className='flex flex-col md:flex-row gap-10 max-w-maxContent'>
             {course.map((item, index) => {
                 return (
                     
