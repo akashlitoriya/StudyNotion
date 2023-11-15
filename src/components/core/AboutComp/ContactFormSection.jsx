@@ -34,17 +34,17 @@ const ContactFormSection = () => {
   }
 
   return (
-    <div className='flex flex-col items-center gap-14 lg:mt-16 '>
+    <div className='flex flex-col items-center gap-5 md:gap-14 mt-10 lg:mt-16 '>
       <div className='flex flex-col gap-5 text-center'>
-        <div className='text-4xl font-inter text-richblack-5 font-bold'>Get in touch</div>
-        <p className='text-xl text-richblack-200 font-inter font-medium'>We’d love to here for you, Please fill out this form.</p>
+        <div className='text-2xl md:text-4xl font-inter text-richblack-5 font-bold'>Get in touch</div>
+        <p className='text-base md:text-xl text-richblack-200 font-inter font-medium'>We’d love to here for you, Please fill out this form.</p>
       </div>
 
-      <form className='flex flex-col gap-10 w-11/12 lg:w-[600px]' onSubmit={handleSubmit(submitContactForm)}>
+      <form className='flex flex-col gap-5 md:gap-10 w-11/12 lg:w-[600px]' onSubmit={handleSubmit(submitContactForm)}>
         {/* First Name and Last Name  */}
-        <div className='flex flex-row gap-6 w-full'>
+        <div className='flex flex-col md:flex-row gap-6 w-full'>
 
-          <div className='flex flex-col gap-3 w-1/2'>
+          <div className='flex flex-col gap-3 md:w-1/2'>
             <label htmlFor='firstName' className='font-inter text-sm text-richblack-5'>First Name</label>
             <input 
               type='text'
@@ -61,7 +61,7 @@ const ContactFormSection = () => {
             }
           </div>
 
-          <div className='flex flex-col gap-3 w-1/2'>
+          <div className='flex flex-col gap-3 md:w-1/2'>
             <label htmlFor='lastName' className='font-inter text-sm text-richblack-5'>Last Name</label>
             <input 
               type='text'

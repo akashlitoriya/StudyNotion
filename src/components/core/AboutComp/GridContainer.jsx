@@ -45,7 +45,7 @@ const LearningGridArray = [
 
 const GridContainer = () => {
   return (
-    <div className='grid grid-cols-4 max-w-maxContent'>
+    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-maxContent'>
       {
         LearningGridArray.map((card, index) => (
             <div key={index} className={`h-[250px]   
@@ -56,17 +56,17 @@ const GridContainer = () => {
             >
                 {
                     card.order === -1? (
-                        <div className='flex flex-col gap-6 px-5'>
-                            <h1 className='font-inter text-xl font-semibold text-richblack-50'>World-Class Learning for <br></br><HighlightedText text = {"Anyone, Anywhere"} /></h1>
-                            <p className='text-richblack-300 text-base'>Studynotion partners with more than 275+ leading universities and companies to bring flexible, affordable, job-relevant online learning to individuals and organizations worldwide.</p>
+                        <div className='flex flex-col gap-3 md:gap-6 px-3 md:px-5'>
+                            <h1 className='font-inter text-lg md:text-xl font-semibold text-richblack-50'>World-Class Learning for <br></br><HighlightedText text = {"Anyone, Anywhere"} /></h1>
+                            <p className='text-richblack-300 text-sm md:text-base'>Studynotion partners with more than 275+ leading universities and companies to bring flexible, affordable, job-relevant online learning to individuals and organizations worldwide.</p>
                             <Button linkTo={'/signup'} active={true}> Learn More</Button>
                         </div>
                     )
                     :
                     (
-                    <div className='p-5 flex flex-col gap-6'>
-                        <h1 className='text-xl text-richblack-25 font-inter font-bold'>{card.heading}</h1>
-                        <p className='text-base text-richblack-300 font-inter'>{card.description}</p>
+                    <div className='p-3 md:p-5 flex flex-col gap-3 md:gap-6'>
+                        <h1 className='text-lg md:text-xl text-richblack-25 font-inter font-bold'>{card.heading}</h1>
+                        <p className='text-sm md:text-base text-richblack-300 font-inter'>{card.description}</p>
                     </div>
                     )
                 }
