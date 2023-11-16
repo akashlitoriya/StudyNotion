@@ -9,8 +9,17 @@ import ForgotPassword from './pages/ForgotPassword'
 import UpdatePassword from "./pages/UpdatePassword";
 import VerifyEmail from "./pages/VerifyEmail";
 import About from "./pages/About";
+import Dashboard from "./pages/Dashboard";
+import MyProfile from "./components/core/Dashboardcomp/MyProfile";
+import ProtectedRoute from "./components/core/Auth/ProtectedRoute";
+import ProfileSetting from "./components/core/Dashboardcomp/ProfileSetting";
+import EnrolledCourses from "./components/core/Dashboardcomp/EnrolledCourses";
+import Cart from "./components/core/Dashboardcomp/Cart";
+import ContactUs from "./components/core/ContactUs";
+import { useSelector } from "react-redux";
+import AddCourse from "./components/core/Dashboardcomp/AddCourse";
 function App() {
-  
+  const {user} = useSelector((state) => state.profile);
   return (
 
     <div className="w-screen min-h-screen bg-richblack-900">
@@ -60,11 +69,64 @@ function App() {
         <Route 
           path = "about"
           element = {
-            <OpenRoute>
+            // <OpenRoute>
               <About />
-            </OpenRoute>
+            // </OpenRoute>
           }
         />
+        <Route
+          path = "contact"
+          element = {
+              // <OpenRoute>
+                <ContactUs />
+              // </OpenRoute>
+            }
+          />
+       <Route 
+        path = "dashboard"
+        element = {
+          <ProtectedRoute>
+            <Dashboard />
+          </ProtectedRoute>
+          
+        }
+        >
+          <Route
+            path = "my-profile"
+            element = {
+            <ProtectedRoute>
+              <MyProfile />
+            </ProtectedRoute>
+          }
+          />
+          <Route 
+            path = "setting"
+            element = {
+              <ProtectedRoute>
+                <ProfileSetting />
+              </ProtectedRoute>
+            }
+          />
+          <Route 
+            path = "enrolled-courses"
+            element = {
+              <ProtectedRoute>
+                <EnrolledCourses />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path = "cart"
+            element = {
+              <Cart />
+            }
+          />
+          {
+            <Route path="add-course" element= {<AddCourse />} />
+
+          }
+        </Route>
+
       </Routes>
     </div>
     
