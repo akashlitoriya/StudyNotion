@@ -26,6 +26,8 @@ app.use(
     cors({
         origin: 'https://study-notion-akash-litoriya.vercel.app/',
         credentials: true,
+        allowedHeaders: ['Content-Type', 'Authorization'],
+        
     })
 )
 app.use(
