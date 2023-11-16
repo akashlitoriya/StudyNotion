@@ -1,6 +1,9 @@
 const Profile = require('../models/profile')
 const User = require('../models/User');
+const Course = require('../models/course')
 const {uploadImageToCloudinary} = require('../utils/imageUploader')
+const mongoose = require('mongoose')
+const CourseProgress = require('../models/courseProgress')
 exports.updateProfile = async(req, res) => {
     try{
         //getting user id from user in req
@@ -43,7 +46,7 @@ exports.updateProfile = async(req, res) => {
 exports.deleteAccount = async (req, res) => {
     try {
       const id = req.user.id
-      console.log(id)
+      
       const user = await User.findById({ _id: id })
       if (!user) {
         return res.status(404).json({
@@ -107,7 +110,7 @@ exports.deleteAccount = async (req, res) => {
         1000,
         1000
       )
-      console.log(image)
+      
       const updatedProfile = await User.findByIdAndUpdate(
         { _id: userId },
         { image: image.secure_url },
