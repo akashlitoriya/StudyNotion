@@ -9,15 +9,15 @@ import ForgotPassword from './pages/ForgotPassword'
 import UpdatePassword from "./pages/UpdatePassword";
 import VerifyEmail from "./pages/VerifyEmail";
 import About from "./pages/About";
-import Dashboard from "./pages/Dashboard";
-import MyProfile from "./components/core/Dashboardcomp/MyProfile";
-import ProtectedRoute from "./components/core/Auth/ProtectedRoute";
-import ProfileSetting from "./components/core/Dashboardcomp/ProfileSetting";
-import EnrolledCourses from "./components/core/Dashboardcomp/EnrolledCourses";
-import Cart from "./components/core/Dashboardcomp/Cart";
+// import Dashboard from "./pages/Dashboard";
+// import MyProfile from "./components/core/Dashboardcomp/MyProfile";
+// import ProtectedRoute from "./components/core/Auth/ProtectedRoute";
+// import ProfileSetting from "./components/core/Dashboardcomp/ProfileSetting";
+// import EnrolledCourses from "./components/core/Dashboardcomp/EnrolledCourses";
+// import Cart from "./components/core/Dashboardcomp/Cart";
 import ContactUs from "./components/core/ContactUs";
 import { useSelector } from "react-redux";
-import AddCourse from "./components/core/Dashboardcomp/AddCourse";
+// import AddCourse from "./components/core/Dashboardcomp/AddCourse";
 function App() {
   const {user} = useSelector((state) => state.profile);
   return (
