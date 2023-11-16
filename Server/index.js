@@ -24,7 +24,7 @@ app.use(cookieParser())
 app.use(express.json());
 app.use(
     cors({
-        origin: 'https://study-notion-akash-litoriya.vercel.app/',
+        origin: '*',
         credentials: true,
         allowedHeaders: ['Content-Type', 'Authorization'],
         
