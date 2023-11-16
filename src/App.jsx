@@ -9,9 +9,9 @@ import ForgotPassword from './pages/ForgotPassword'
 import UpdatePassword from "./pages/UpdatePassword";
 import VerifyEmail from "./pages/VerifyEmail";
 import About from "./pages/About";
-// import Dashboard from "./pages/Dashboard";
-// import MyProfile from "./components/core/Dashboardcomp/MyProfile";
-// import ProtectedRoute from "./components/core/Auth/ProtectedRoute";
+import Dashboard from "./pages/Dashboard";
+import MyProfile from "./components/core/Dashboardcomp/MyProfile";
+import ProtectedRoute from "./components/core/Auth/ProtectedRoute";
 // import ProfileSetting from "./components/core/Dashboardcomp/ProfileSetting";
 // import EnrolledCourses from "./components/core/Dashboardcomp/EnrolledCourses";
 // import Cart from "./components/core/Dashboardcomp/Cart";
@@ -82,7 +82,7 @@ function App() {
               // </OpenRoute>
             }
           />
-       {/* <Route 
+       <Route 
         path = "dashboard"
         element = {
           <ProtectedRoute>
@@ -90,15 +90,15 @@ function App() {
           </ProtectedRoute>
           
         }
-        > */}
-          {/* <Route
+        >
+          <Route
             path = "my-profile"
             element = {
             <ProtectedRoute>
               <MyProfile />
             </ProtectedRoute>
           }
-          /> */}
+          />
           {/* <Route 
             path = "setting"
             element = {
@@ -125,7 +125,8 @@ function App() {
             <Route path="add-course" element= {<AddCourse />} />
 
           }
-        </Route> */}
+        */}
+        </Route> 
 
       </Routes>
     </div>

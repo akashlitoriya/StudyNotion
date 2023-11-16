@@ -9,6 +9,7 @@ import {category} from '../../services/apis'
 import {apiConnector} from '../../services/apiConnector'
 import {IoIosArrowDropdownCircle} from 'react-icons/io'
 import { getAllCategories } from '../../services/operations/categoryAPI'
+import DashboardDropdown from './Dashboardcomp/DashboardDropdown'
 
 const ssublinks = [
     {
@@ -93,6 +94,16 @@ const Navbar = () => {
                         }
                     </ul>
                 </nav>
+
+
+                {/* Dashboard dropdown  */}
+                {
+                    user && (
+                        <div className='w-full lg:hidden border-b-2 border-richblack-5 pb-5'>
+                            <DashboardDropdown />
+                        </div>
+                    )
+                }
 
                 <div className='w-full lg:w-fit flex flex-col items-center lg:flex-row gap-x-0 gap-y-4 lg:gap-y-0 lg:gap-x-4 border-b-2 lg:border-b-0 border-richblack-100 pb-4 lg:pb-0'>
                     {
