@@ -82,7 +82,7 @@ function App() {
               // </OpenRoute>
             }
           />
-       <Route 
+       {/* <Route 
         path = "dashboard"
         element = {
           <ProtectedRoute>
@@ -90,42 +90,42 @@ function App() {
           </ProtectedRoute>
           
         }
-        >
-          <Route
+        > */}
+          {/* <Route
             path = "my-profile"
             element = {
             <ProtectedRoute>
               <MyProfile />
             </ProtectedRoute>
           }
-          />
-          <Route 
+          /> */}
+          {/* <Route 
             path = "setting"
             element = {
               <ProtectedRoute>
                 <ProfileSetting />
               </ProtectedRoute>
             }
-          />
-          <Route 
+          /> */}
+          {/* <Route 
             path = "enrolled-courses"
             element = {
               <ProtectedRoute>
                 <EnrolledCourses />
               </ProtectedRoute>
             }
-          />
-          <Route
+          /> */}
+          {/* <Route
             path = "cart"
             element = {
               <Cart />
             }
-          />
-          {
+          /> */}
+          {/* {
             <Route path="add-course" element= {<AddCourse />} />
 
           }
-        </Route>
+        </Route> */}
 
       </Routes>
     </div>
