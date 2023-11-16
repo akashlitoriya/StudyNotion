@@ -10,7 +10,7 @@ exports.createCourse = async(req, res) =>{
         //extracting data from req body
         const {courseName, courseDescription, whatYouWillLearn, price, tag, category} = req.body;
         //extractionf file
-        const thumbnail = req.files.thumbnailImage;
+        const thumbnail = req.files.thumbnail;
         //validating data and file
         if(!courseName|| !courseDescription || !whatYouWillLearn || !price || !tag || !thumbnail || !category){
             return res.status(401).json({
