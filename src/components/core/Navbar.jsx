@@ -98,7 +98,7 @@ const Navbar = () => {
                     {
                         user&&user.accountType !== 'Instructor' && (
                             <Link to='/dashboard/cart' className='relative' onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                                <AiOutlineShoppingCart />
+                                <AiOutlineShoppingCart className='text-richblack-5 text-xl'/>
                                 {
                                     totalItems > 0 && (
                                         <span>{totalItems}</span>
