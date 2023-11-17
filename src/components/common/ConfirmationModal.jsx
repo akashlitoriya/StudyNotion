@@ -3,8 +3,8 @@ import IconBtn from './IconBtn'
 const ConfirmationModal = ({modalData}) => {
   return (
     <div className='relative z-10 flex justify-center items-center'>
-      <div className='fixed z-50 inset-0 bg-opacity-90 transition-opacity overflow-y-auto bg-richblack-800 lg:p-10 flex justify-center items-center gap-3'>
-        <div className='inset-0 max-w-maxContent lg:p-12 flex flex-col gap-3 bg-richblack-900'>
+      <div className='fixed z-50 inset-0 bg-opacity-90 transition-opacity overflow-y-auto bg-richblack-800 p-6 lg:p-10 flex justify-center items-center gap-3'>
+        <div className='inset-0 max-w-maxContent p-6 rounded-lg lg:p-12 flex flex-col gap-3 bg-richblack-900'>
           <p className='text-richblack-5 font-inter text-xl font-semibold'>
               {modalData.heading}
           </p>

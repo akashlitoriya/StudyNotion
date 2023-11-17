@@ -12,7 +12,7 @@ import About from "./pages/About";
 import Dashboard from "./pages/Dashboard";
 import MyProfile from "./components/core/Dashboardcomp/MyProfile";
 import ProtectedRoute from "./components/core/Auth/ProtectedRoute";
-// import ProfileSetting from "./components/core/Dashboardcomp/ProfileSetting";
+import ProfileSetting from "./components/core/Dashboardcomp/ProfileSetting";
 // import EnrolledCourses from "./components/core/Dashboardcomp/EnrolledCourses";
 // import Cart from "./components/core/Dashboardcomp/Cart";
 import ContactUs from "./components/core/ContactUs";
@@ -99,14 +99,14 @@ function App() {
             </ProtectedRoute>
           }
           />
-          {/* <Route 
+          <Route 
             path = "setting"
             element = {
               <ProtectedRoute>
                 <ProfileSetting />
               </ProtectedRoute>
             }
-          /> */}
+          />
           {/* <Route 
             path = "enrolled-courses"
             element = {

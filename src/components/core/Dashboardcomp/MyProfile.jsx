@@ -6,9 +6,9 @@ import { useNavigate } from 'react-router-dom';
 const MyProfile = () => {
     const {user} = useSelector((state) => state.profile);
     const navigate = useNavigate();
-    console.log("User",user);
+    
   return (
-    <div className='w-full mt-14 py-6'>
+    <div className='w-full py-6'>
         <h1 className='text-xl md:text-3xl font-inter font-bold text-richblack-5 mt-4 ml-4 lg:ml-8 lg:mt-8'>My Profile</h1>
         {/* Section - 1  */}
       <div className='flex flex-col md:flex-row justify-between items-center gap-3 w-10/12 mx-auto my-4 lg:my-7 p-4 lg:p-10 rounded-xl bg-richblack-800'>
