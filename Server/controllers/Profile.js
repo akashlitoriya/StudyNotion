@@ -28,11 +28,12 @@ exports.updateProfile = async(req, res) => {
             },
             {new: true}
         )
+        const userUpdated = await User.findById(userId).populate('additionalDetails').exec();
 
         return res.status(201).json({
             success: true,
             message: "Successfully updated the profile of user",
-            updateProfile: updatedProfile
+            updateProfile: userUpdated
         })
     }catch(err){
         return res.status(501).json({
