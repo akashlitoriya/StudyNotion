@@ -10,13 +10,13 @@ const Dashboard = () => {
 
     if(profileLoading || authLoading){
         return (
-            <div className='font-inter text-3xl text-richblack-5 mt-10'>Loading...</div>
+            <div className='font-inter text-3xl text-richblack-5 mt-18'>Loading...</div>
         )
     }
 
   return (
     <div className='w-full flex'>
-      <div className='hidden md:static min-h-[calc(100vh-4rem)] bg-richblack-800'>
+      <div className='hidden lg:block min-h-[calc(100vh-4rem)] bg-richblack-800'>
         <Sidebar />
       </div>
       <div className=' min-h-[calc(100vh-4rem)] w-full'>
