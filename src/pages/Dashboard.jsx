@@ -15,7 +15,7 @@ const Dashboard = () => {
     }
 
   return (
-    <div className='w-full flex'>
+    <div className='w-full flex mt-14'>
       <div className='hidden lg:block min-h-[calc(100vh-4rem)] bg-richblack-800'>
         <Sidebar />
       </div>
